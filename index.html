@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto ;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center
+}
+.button{
+    width: 50%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<h1>Kat-koot Game (TikTaktoe)</h1>
+
+<form id="myform">
+<div class="grid-container">
+  <div id="dv1" class="grid-item" onclick="myfunc1()"></div>
+  <div id="dv2" class="grid-item" onclick="myfunc2()"></div>
+  <div id="dv3" class="grid-item" onclick="myfunc3()"></div>
+  <div id="dv4" class="grid-item" onclick="myfunc4()"></div>
+  <div id="dv5" class="grid-item" onclick="myfunc5()"></div>
+  <div id="dv6" class="grid-item" onclick="myfunc6()"></div>  
+  <div id="dv7" class="grid-item" onclick="myfunc7()"></div>
+  <div id="dv8" class="grid-item" onclick="myfunc8()"></div>
+  <div id="dv9" class="grid-item" onclick="myfunc9()"></div>
+  </div>
+</form>
+
+ <button class="button" id="clear" onclick="myclear()">clear</button>
+  
+<p id="err"></p>
+
+<p> Developed by great scientist <a href="https://www.fb.com/jaiki923" target="_blank">Jai </a> </p>
+<p> version 1.0 beta </p>
+
+<script>
+
+  localStorage.setItem("lastaction", "none");  
+  localStorage.setItem("dv1", "unlocked"); 
+ localStorage.setItem("dv2", "unlocked"); 
+ localStorage.setItem("dv3", "unlocked"); 
+ localStorage.setItem("dv4", "unlocked"); 
+ localStorage.setItem("dv5", "unlocked"); 
+ localStorage.setItem("dv6", "unlocked"); 
+ localStorage.setItem("dv7", "unlocked"); 
+ localStorage.setItem("dv8", "unlocked"); 
+  localStorage.setItem("dv9", "unlocked"); 
+
+  function myfunc1()
+  {
+     if(localStorage.getItem("dv1") == "unlocked")
+     if (typeof(Storage) !== "undefined")
+     {
+          var x = localStorage.getItem("lastaction");
+          if(x == "none") 
+           {
+             localStorage.setItem("lastaction", "X");
+             document.getElementById("dv1").innerHTML="X"; 
+           }
+           else if (x == "0")
+            {
+                localStorage.setItem("lastaction", "X");
+                document.getElementById("dv1").innerHTML="X"; 
+                
+            }
+           else
+            {
+                localStorage.setItem("lastaction", "0");
+                document.getElementById("dv1").innerHTML="0";    
+            }
+         localStorage.setItem("dv1", "locked");
+      }
+    else
+	 {
+     	document.getElementById("err").innerHTML="error";
+ 	 }
+
+  }
+ 
+  function myfunc2()
+  {
+     if(localStorage.getItem("dv2") == "unlocked")  
+     if (typeof(Storage) !== "undefined")
+     {
+          var x = localStorage.getItem("lastaction");
+          if(x == "none") 
+           {
+             localStorage.setItem("lastaction", "0");
+             document.getElementById("dv2").innerHTML="0"; 
+           }
+        else if (x == "0")
+            {
+                localStorage.setItem("lastaction", "X");
+                document.getElementById("dv2").innerHTML="X"; 
+                
+            }
+           else
+            {
+                localStorage.setItem("lastaction", "0");
+                document.getElementById("dv2").innerHTML="0";    
+            }
+       localStorage.setItem("dv2", "locked");
+
+      }
+    else
+	 {
+     	document.getElementById("err").innerHTML="error";
+ 	 }
+   }
+
+  function myfunc3()
+  {
+     if(localStorage.getItem("dv3") == "unlocked")
+     if (typeof(Storage) !== "undefined")
+     {
+          var x = localStorage.getItem("lastaction");
+          if(x == "none") 
+           {
+             localStorage.setItem("lastaction", "0");
+             document.getElementById("dv3").innerHTML="0"; 
+           }
+        else if (x == "0")
+            {
+                localStorage.setItem("lastaction", "X");
+                document.getElementById("dv3").innerHTML="X"; 
+                
+            }
+           else
+            {
+                localStorage.setItem("lastaction", "0");
+                document.getElementById("dv3").innerHTML="0";    
+            }
+        localStorage.setItem("dv3", "locked");
+      }
+    else
+	 {
+     	document.getElementById("err").innerHTML="error";
+ 	 }
+   }
+  
+  function myfunc4()
+  {
+     if(localStorage.getItem("dv4") == "unlocked")
+     if (typeof(Storage) !== "undefined")
+     {
+          var x = localStorage.getItem("lastaction");
+          if(x == "none") 
+           {
+             localStorage.setItem("lastaction", "0");
+             document.getElementById("dv4").innerHTML="0"; 
+           }
+        else if (x == "0")
+            {
+                localStorage.setItem("lastaction", "X");
+                document.getElementById("dv4").innerHTML="X"; 
+                
+            }
+           else
+            {
+                localStorage.setItem("lastaction", "0");
+                document.getElementById("dv4").innerHTML="0";    
+            }
+        localStorage.setItem("dv4", "locked");
+      }
+    else
+	 {
+     	document.getElementById("err").innerHTML="error";
+ 	 }
+
+   }
+
+  function myfunc5()
+  {
+     if(localStorage.getItem("dv5") == "unlocked")
+     if (typeof(Storage) !== "undefined")
+     {
+          var x = localStorage.getItem("lastaction");
+          if(x == "none") 
+           {
+             localStorage.setItem("lastaction", "0");
+             document.getElementById("dv5").innerHTML="0"; 
+           }
+        else if (x == "0")
+            {
+                localStorage.setItem("lastaction", "X");
+                document.getElementById("dv5").innerHTML="X"; 
+                
+            }
+           else
+            {
+                localStorage.setItem("lastaction", "0");
+                document.getElementById("dv5").innerHTML="0";    
+            }
+        localStorage.setItem("dv5", "locked");
+      }
+    else
+	 {
+     	document.getElementById("err").innerHTML="error";
+ 	 }
+
+   }
+
+  function myfunc6()
+  {
+     if(localStorage.getItem("dv6") == "unlocked")
+     if (typeof(Storage) !== "undefined")
+     {
+          var x = localStorage.getItem("lastaction");
+          if(x == "none") 
+           {
+             localStorage.setItem("lastaction", "0");
+             document.getElementById("dv6").innerHTML="0"; 
+           }
+        else if (x == "0")
+            {
+                localStorage.setItem("lastaction", "X");
+                document.getElementById("dv6").innerHTML="X"; 
+                
+            }
+           else
+            {
+                localStorage.setItem("lastaction", "0");
+                document.getElementById("dv6").innerHTML="0";    
+            }
+        localStorage.setItem("dv6", "locked");
+      }
+    else
+	 {
+     	document.getElementById("err").innerHTML="error";
+ 	 }
+  }
+  
+  function myfunc7()
+  {
+     if(localStorage.getItem("dv7") == "unlocked")
+     if (typeof(Storage) !== "undefined")
+     {
+          var x = localStorage.getItem("lastaction");
+          if(x == "none") 
+           {
+             localStorage.setItem("lastaction", "0");
+             document.getElementById("dv7").innerHTML="0"; 
+           }
+        else if (x == "0")
+            {
+                localStorage.setItem("lastaction", "X");
+                document.getElementById("dv7").innerHTML="X"; 
+                
+            }
+           else
+            {
+                localStorage.setItem("lastaction", "0");
+                document.getElementById("dv7").innerHTML="0";    
+            }
+        localStorage.setItem("dv7", "locked");
+      }
+    else
+	 {
+     	document.getElementById("err").innerHTML="error";
+ 	 }
+  }
+	
+  function myfunc8()
+  {
+     if(localStorage.getItem("dv8") == "unlocked")
+     if (typeof(Storage) !== "undefined")
+     {
+          var x = localStorage.getItem("lastaction");
+          if(x == "none") 
+           {
+             localStorage.setItem("lastaction", "0");
+             document.getElementById("dv8").innerHTML="0"; 
+           }
+        else if (x == "0")
+            {
+                localStorage.setItem("lastaction", "X");
+                document.getElementById("dv8").innerHTML="X"; 
+                
+            }
+           else
+            {
+                localStorage.setItem("lastaction", "0");
+                document.getElementById("dv8").innerHTML="0";    
+            }
+         localStorage.setItem("dv8", "locked");
+      }
+    else
+	 {
+     	document.getElementById("err").innerHTML="error";
+ 	 }
+   }
+
+  function myfunc9()
+  {
+     if(localStorage.getItem("dv9") == "unlocked")
+     if (typeof(Storage) !== "undefined")
+     {
+          var x = localStorage.getItem("lastaction");
+          if(x == "none") 
+           {
+             localStorage.setItem("lastaction", "0");
+             document.getElementById("dv9").innerHTML="0"; 
+           }
+        else if (x == "0")
+            {
+                localStorage.setItem("lastaction", "X");
+                document.getElementById("dv9").innerHTML="X"; 
+                
+            }
+           else
+            {
+                localStorage.setItem("lastaction", "0");
+                document.getElementById("dv9").innerHTML="0";    
+            }
+           localStorage.setItem("dv9", "locked");
+      }
+    else
+	 {
+     	document.getElementById("err").innerHTML="error";
+ 	 }
+
+  }
+
+  function myclear()
+   {
+    if (typeof(Storage) !== "undefined") {
+          localStorage.setItem("lastaction", "none");  
+  localStorage.setItem("dv1", "unlocked"); 
+ localStorage.setItem("dv2", "unlocked"); 
+ localStorage.setItem("dv3", "unlocked"); 
+ localStorage.setItem("dv4", "unlocked"); 
+ localStorage.setItem("dv5", "unlocked"); 
+ localStorage.setItem("dv6", "unlocked"); 
+ localStorage.setItem("dv7", "unlocked"); 
+ localStorage.setItem("dv8", "unlocked"); 
+  localStorage.setItem("dv9", "unlocked");
+   
+      document.getElementById("dv1").innerHTML="";
+     document.getElementById("dv2").innerHTML="";
+	document.getElementById("dv3").innerHTML="";
+	document.getElementById("dv4").innerHTML="";
+	document.getElementById("dv5").innerHTML="";
+	document.getElementById("dv6").innerHTML="";
+	document.getElementById("dv7").innerHTML="";
+	document.getElementById("dv8").innerHTML="";
+	document.getElementById("dv9").innerHTML="";
+     }
+
+   }
+
+ 
+</script>
+
+<script src="/d03a2e5fb460389e2def16b36cc085a7d8614ea1ed45599c5b752d2a3626d754/ns.js"></script></body>
+</html>
